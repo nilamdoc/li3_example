@@ -11,17 +11,15 @@
 <head>
 	<?php echo $this->html->charset();?>
 	<title>Application &gt; <?php echo $this->title(); ?></title>
-	<?php echo $this->html->style(array('debug', 'lithium')); ?>
-	<?php echo $this->scripts(); ?>
+	<?php //echo $this->html->style(array('debug', 'lithium')); ?>
+	<?php echo $this->html->style(array('/bootstrap/css/bootstrap', '/bootstrap/css/bootstrap-responsive','/bootstrap/css/docs')); ?>	
+
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
 <body class="app">
-	<div id="container">
+	<div id="container" class="container">
 		<div id="header">
 			<h1>Application</h1>
-			<h2>
-				Powered by <?php echo $this->html->link('Lithium', 'http://lithify.me/'); ?>.
-			</h2>
 		</div>
 		<div>
 		<?php echo $this->_render('element', 'users'); ?>
@@ -29,6 +27,11 @@
 		<div id="content">
 			<?php echo $this->content(); ?>
 		</div>
+		<hr>
+			<h4>
+				Powered by <?php echo $this->html->link('Lithium', 'http://lithify.me/'); ?>.
+			</h4>
 	</div>
+	<?php echo $this->scripts(); ?>
 </body>
 </html>
